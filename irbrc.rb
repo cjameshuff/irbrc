@@ -21,6 +21,8 @@ def ex(cmd)
 end
 
 # Some hexadecimal/binary tools, useful for working with registers and bit flags
+
+# Convert a value or an array or hash of values to hexadecimal string form.
 def hex(x)
     case x
     when Numeric
@@ -32,6 +34,7 @@ def hex(x)
     end
 end
 
+# Convert a value to a binary string, in groups of 4 bits separated by spaces
 def bin(x)
     x.to_s(16).chars.to_a.map{|d| d.to_i(16).to_s(2).rjust(4, '0')}.join(' ')
 end
